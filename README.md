@@ -52,7 +52,8 @@ in size. Arguments of file types like `fs.File` of
 
 See the [package documentation](https://pkg.go.dev/github.com/domonda/go-htmlform)
 for field types, validators, options, custom templates and the security notes,
-and [examples/main.go](examples/main.go) for a runnable example.
+[docs/reference-http-status-codes.md](docs/reference-http-status-codes.md)
+for every response status, and [examples/main.go](examples/main.go) for a runnable example.
 
 ## Development
 
