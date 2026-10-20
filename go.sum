@@ -2,6 +2,8 @@ github.com/aymanbagabas/go-osc52/v2 v2.0.1 h1:HwpRHbFMcZLEVr42D4p7XBqjyuxQH5SMiE
 github.com/aymanbagabas/go-osc52/v2 v2.0.1/go.mod h1:uYgXzlJ7ZpABp8OJ+exZzJJhRNQ2ASbcXHWsFqH8hp8=
 github.com/domonda/go-encjson v0.0.0-20250402115751-77a50fd88c01 h1:4BGxKPjWeaf67CBsD/rpl4fITRPn20T4CdAdB8ChQM0=
 github.com/domonda/go-encjson v0.0.0-20250402115751-77a50fd88c01/go.mod h1:ElLE5XGBbBn/tvy5DFvkk8CAWiQX+6c85Q5WJrpN8R4=
+github.com/domonda/go-function v0.7.2-0.20261020082606-10f3cb08e787 h1:h9oD8cUB+dayavBYG42/YVK+/Rm+BaoCyWPILKlqorY=
+github.com/domonda/go-function v0.7.2-0.20261020082606-10f3cb08e787/go.mod h1:S2qEs/J5O8AqxvPx8eDG1uxpMfoqdxjwHRgeJCSoA9g=
 github.com/domonda/golog v0.0.0-20251017132449-0f47932ca3b1 h1:hUIwQOb4/+MlMJz4+2RougyCLtLkyOIm9P5t7U9uEFI=
 github.com/domonda/golog v0.0.0-20251017132449-0f47932ca3b1/go.mod h1:Nyj2YJtiUHtEN90Vt1mnDZm0SX/UmpEZYvP4M5cdMKI=
 github.com/fsnotify/fsnotify v1.10.1 h1:b0/UzAf9yR5rhf3RPm9gf3ehBPpf0oZKIjtpKrx59Ho=

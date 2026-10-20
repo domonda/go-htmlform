@@ -1,6 +1,6 @@
 package main
 
-//go:generate go run ../../cmd/gen-func-wrappers $GOFILE
+//go:generate go tool -modfile=../tools/go.mod gen-func-wrappers $GOFILE
 
 import (
 	"context"
@@ -14,8 +14,8 @@ import (
 	"github.com/ungerik/go-httpx/httperr"
 
 	"github.com/domonda/go-function"
-	"github.com/domonda/go-function/htmlform"
 	"github.com/domonda/go-function/httpfun"
+	"github.com/domonda/go-htmlform"
 	"github.com/domonda/golog/log"
 )
 

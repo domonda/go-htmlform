@@ -1,0 +1,40 @@
+name: Go
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Set up Go
+      uses: actions/setup-go@v6
+      with:
+        go-version: '1.26.5'
+
+    - name: Build
+      run: go build ./...
+
+    - name: Check modules are tidy
+      run: |
+        go mod tidy -diff
+        (cd tools && go mod tidy -diff)
+
+    - name: Vet
+      run: go vet ./...
+
+    - name: Test
+      run: go test -count=1 -race -v ./...
+
+    - name: Check generated wrappers are up to date
+      working-directory: examples
+      run: go tool -modfile=../tools/go.mod gen-func-wrappers -validate main.go
+
+    - name: Gosec
+      run: go tool -modfile=tools/go.mod gosec ./...

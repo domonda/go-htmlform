@@ -220,7 +220,7 @@
 //	    "net/http"
 //
 //	    "github.com/domonda/go-function"
-//	    "github.com/domonda/go-function/htmlform"
+//	    "github.com/domonda/go-htmlform"
 //	    "github.com/domonda/go-function/httpfun"
 //	)
 //

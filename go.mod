@@ -1,12 +1,9 @@
-module github.com/domonda/go-function/htmlform
+module github.com/domonda/go-htmlform
 
 go 1.26.0
 
-replace github.com/domonda/go-function => ..
-
-require github.com/domonda/go-function v0.0.0-00010101000000-000000000000 // replaced
-
 require (
+	github.com/domonda/go-function v0.7.2-0.20261020082606-10f3cb08e787
 	github.com/domonda/golog v0.0.0-20251017132449-0f47932ca3b1
 	github.com/stretchr/testify v1.12.1
 	github.com/ungerik/go-fs v1.0.0-beta.1
