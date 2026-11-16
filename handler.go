@@ -536,7 +536,7 @@ func (handler *Handler) post(response http.ResponseWriter, request *http.Request
 			_ = request.MultipartForm.RemoveAll()
 		}
 	}()
-	formfs, err := multipartfs.FromRequestForm(request, httpfun.MaxMultipartFormMemory)
+	formfs, err := multipartfs.NewFromRequest(request, httpfun.MaxMultipartFormMemory, "")
 	if err != nil {
 		var (
 			maxBytesErr *http.MaxBytesError
@@ -558,6 +558,13 @@ func (handler *Handler) post(response http.ResponseWriter, request *http.Request
 		return
 	}
 	defer formfs.Close()
+	// Register so that the fs.File values of the uploaded files resolve,
+	// Close unregisters the file system again
+	err = fs.Register(formfs)
+	if err != nil {
+		httpfun.HandleError(fmt.Errorf("can't register form upload file system: %w", err), response, request)
+		return
+	}
 
 	var results []any
 	args, err := handler.parseArgs(formfs)
