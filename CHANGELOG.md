@@ -32,10 +32,12 @@ until its release `htmlform/v0.7.1`. Its earlier changes are documented in the
 - **Breaking:** the module path is `github.com/domonda/go-htmlform`
   instead of `github.com/domonda/go-function/htmlform`.
 - **Breaking:** requires the v1.0.0 API of `github.com/domonda/go-function`, see its changelog.
-- **Breaking:** requires `github.com/ungerik/go-fs` v1.0.0-beta.1 instead of a pseudo-version,
+- **Breaking:** requires `github.com/ungerik/go-fs` v1.0.0-rc.8 instead of a pseudo-version,
   which opens every upload by its own file and field name: names like `report%201.pdf`
   or with a `"` no longer answer 404, and a file named `..%2Fother%2Fx.txt` no longer reads
   the upload of the field `other`. `ReadAll` and `ReadAllString` of go-fs files take a context.
+  The handler parses uploads with `multipartfs.NewFromRequest` and registers the file system
+  for the duration of the request, because go-fs v1 removed `multipartfs.FromRequestForm`.
 - **Breaking:** `htmlform.Handler.SetArgValidator` takes an `htmlform.ArgValidator`
   instead of `types.Validatable`, and htmlform no longer depends on `github.com/domonda/go-types`.
 - **Breaking:** `htmlform.NewHandler` returns an error for arguments with a file type in a struct field

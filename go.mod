@@ -6,7 +6,7 @@ require (
 	github.com/domonda/go-function v0.7.2-0.20261020082606-10f3cb08e787
 	github.com/domonda/golog v0.0.0-20251017132449-0f47932ca3b1
 	github.com/stretchr/testify v1.12.1
-	github.com/ungerik/go-fs v1.0.0-beta.1
+	github.com/ungerik/go-fs v1.0.0-rc.8
 	github.com/ungerik/go-httpx v0.0.0-20251017073014-97cd3c51cbda
 )
 
@@ -20,7 +20,7 @@ require (
 	github.com/muesli/termenv v0.16.0 // indirect
 	github.com/pkg/xattr v0.4.12 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
-	go.yaml.in/yaml/v3 v3.0.5 // indirect
-	golang.org/x/sys v0.49.0 // indirect
+	go.yaml.in/yaml/v3 v3.0.6 // indirect
+	golang.org/x/sys v0.50.0 // indirect
 	golang.org/x/term v0.47.0 // indirect
 )
